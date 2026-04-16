@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from stat_pgs_tmpl import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', views.home, name="MY HOME"),
+    path('contact/', views.contact, name="MY CONTACT"),
 ]
